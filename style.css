@@ -12,28 +12,74 @@ body {
 .sidebar {
     position: fixed;
     top: 0;
-    right: 0; 
+    right: 0;
     left: auto;
     width: 260px;
     height: 100vh;
     background-color: #ffffff;
-    border-left: 1px solid #eaeaea; 
+    border-left: 1px solid #eaeaea;
     border-right: none;
-    padding: 40px;
-    z-index: 100;
+    padding: 40px 20px; 
+    z-index: 1000;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-top-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+.sidebar-middle-group {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
 .brand-logo {
-    font-family: 'Cairo', sans-serif;
+    /* font-family: 'Cairo', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.4;
     letter-spacing: 0px; 
     color: #111111;
-    text-align: right;
+    text-align: right;*/
+    width: 100%;
+}
+
+.logo-text-lines{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #111111;
+    width: 100%;
+    word-spacing: 2px;
+}
+
+.logo-subtext-english {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111;
+    direction: ltr;
+    text-align: center; 
+}
+
+.sidebar-logoimg{
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 8px;
 }
 
 /* Main Framework Calculation Container */
@@ -325,12 +371,19 @@ body {
 .chat-widget-container {
     position: fixed !important;
     bottom: 25px !important;
-    left: 25px !important; 
+    left: 25px !important;    
+    right: auto !important;   
     z-index: 999999 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
     pointer-events: none !important;
+}
+
+.chat-widget-container *, 
+#chatToggleBtn {
+    left: 0 !important;
+    right: auto !important;
 }
 
 .chat-popup-box {
@@ -431,11 +484,14 @@ body {
         position: relative !important;
         width: 100% !important;
         height: auto !important;
-        padding: 30px 20px !important;
+        padding: 15px 25px !important;
         border-left: none !important;
         border-bottom: 1px solid #eaeaea !important;
-        z-index: 1 !important; 
-        overflow: hidden !important;
+        z-index: 1000 !important;
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important; 
+        align-items: center !important;
     }
     .main-content {
         margin-right: 0 !important;
@@ -455,8 +511,64 @@ body {
         pointer-events: auto !important;
         touch-action: manipulation !important;
     }
+
+    .sidebar-top-group{
+        width: auto !important;
+        margin-bottom: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .sidebar-middle-group {
+        width: auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        order: 1 !important;
+    }
+
+    .logo-text-lines {
+        font-size: 1.30rem !important;
+        text-align: left !important; 
+        white-space: nowrap !important;
+        word-spacing: 10px !important;
+    }
+
+    .sidebar-middle-group br {
+        display: inline !important;
+        content: " " !important;
+        margin-left: 8px !important;  
+        margin-right: 8px !important;
+    }
+
     .hero-title {
         font-size: 2.5rem !important;
+    }
+
+    .brand-logo{
+        flex-direction: row-reverse !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .sidebar-logoimg{
+        max-width: 75px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .logo-subtext-english{
+        font-size: 0.8rem !important;
+    }
+
+    .logo-text-lines{
+        font-size: 1.25rem !important;
+        width: auto !important;
+        br {
+            display: none; 
+        }
     }
 }
 
@@ -465,6 +577,6 @@ body {
         font-size: 1.8rem;
     }
     .poll-container{
-        padding: 30px 15px !important;
+        padding: 30px 15px !;
     }
 }
