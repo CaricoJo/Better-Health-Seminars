@@ -72,7 +72,7 @@
             <div class="container-fluid px-4 px-lg-5 py-5">
                 <div class="row align-items-center justify-content-between g-4">
                     <div class="col-xl-9 col-lg-8">
-                        <h2 class="cta-title mb-2">هل أنت مستعد لاتخاذ الخطوة التالية؟</h2>
+                        <h2 class="cta-title mb-2">هل أنت مستعد الآن للتغيير؟</h2>
                         <p class="cta-subtitle mb-4">انضم إلينا في ندواتنا، واكتشف ما يمكننا تقديمه من أجلك.</p>
                         <p class="cta-disclaimer mb-0">
                             كتعبير عن شكرنا لك لحضور الفعالية الصحية الخاصة بشركتك، يسعدنا أن نقدم هذه الدعوة الحصرية لك ولأفراد عائلتك. احصل على <strong>قبول مجاني لحضور ندوة الصحة والعافية القادمة</strong>.
@@ -86,28 +86,38 @@
         </section>
 
         <!-- Section 4: Next Events -->
-        <section class="events-section py-5 px-4 px-lg-5">
-            <h2 class="section-heading text-center my-5">الفعاليات القادمة</h2>
-            <div class="row g-0 justify-content-center border-top border-bottom">
-                <!-- Column 1 -->
-                <div class="col-md-4 event-col text-center py-5 border-start">
-                    <h3 class="event-title mb-3">اسم الفعالية</h3>
-                    <p class="event-desc text-muted mb-5">أضف وصفاً قصيراً هنا.</p>
-                    <a href="#" class="btn-register">سجل الآن <i class="bi bi-chevron-left me-1"></i></a>
-                </div>
-                <!-- Column 2 -->
-                <div class="col-md-4 event-col text-center py-5 border-start">
-                    <h3 class="event-title mb-3">اسم الفعالية</h3>
-                    <p class="event-desc text-muted mb-5">أضف وصفاً قصيراً هنا.</p>
-                    <button class="btn btn-pay">ادفع الآن</button>
-                </div>
-                <!-- Column 3 -->
-                <div class="col-md-4 event-col text-center py-5">
-                    <h3 class="event-title mb-3">اسم الفعالية</h3>
-                    <p class="event-desc text-muted mb-5">أضف وصفاً قصيراً هنا.</p>
-                    <button class="btn btn-pay">ادفع الآن</button>
-                </div>
+        <section class="events-section py-5 px-4 px-lg-5 text-center" style="position: relative; z-index: 10;">
+            <div class="poll-container mx-auto p-5">
+                <h2 class="poll-question mb-4">هل تريد الانضمام لفعالياتنا؟</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" id="pollForm">
+                    <input type="hidden" name="access_key" value="560e1b80-7b6e-4a8e-a772-93b6968eed95">
+                    <input type="hidden" name="form_name" value="استطلاع الفعاليات القادمة">
+
+                    <div class="d-flex justify-content-center gap-5 my-4">
+                        <div class="poll-option">
+                            <input type="radio" name="join_events" id="pollYes" value="نعم" class="poll-radio-input">
+                            <label for="pollYes" class="poll-label">
+                                <span class="custom-radio"></span>
+                                نعم
+                            </label>
+                        </div>
+
+                        <div class="poll-option">
+                            <input type="radio" name="join_events" id="pollNo" value="لا" class="poll-radio-input">
+                            <label for="pollNo" class="poll-label">
+                                <span class="custom-radio"></span>
+                                لا
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-poll-submit">إرسال الإجابة</button>
+                    </div>
+                </form>
+                <div id="pollResponse" class="mt-3 text-success fw-bold d-none">شكراً لك! تم حفظ إجابتك بنجاح.</div>
             </div>
+            
         </section>
 
         <!-- Section 5: Reviews -->
@@ -117,8 +127,8 @@
             <div class="row justify-content-center align-items-stretch g-4 px-xl-5">
                 <!-- Review 1 -->
                 <div class="col-md-4 border-start-md review-card-wrapper px-4">
-                    <div class="review-avatar avatar-purple mb-3">ج</div>
-                    <h4 class="reviewer-name mb-3">جوهان لوتز</h4>
+                    <div class="review-avatar avatar-purple mb-3">J</div>
+                    <h4 class="reviewer-name mb-3">Johann Lutz</h4>
                     <p class="review-text text-muted">كانت مارلين متعاونة للغاية في حل مشكلتي.. شكراً جزيلاً لكم</p>
                     <div class="review-footer mt-auto">
                         <span class="review-time">سنة واحدة</span>
@@ -135,8 +145,8 @@
 
                 <!-- Review 2 -->
                 <div class="col-md-4 border-start-md review-card-wrapper px-4">
-                    <div class="review-avatar avatar-teal mb-3">ج</div>
-                    <h4 class="reviewer-name fw-bold mb-3">خوسيه كوسمي</h4>
+                    <div class="review-avatar avatar-teal mb-3">J</div>
+                    <h4 class="reviewer-name fw-bold mb-3">Jose Cosme</h4>
                     <p class="review-text fw-semibold text-dark">ممتن جداً للخدمة الممتازة، عمل نظيف للغاية، منظم، ودود ومتعاون جداً</p>
                     <div class="review-footer mt-auto">
                         <span class="review-time">9 أشهر</span>
@@ -156,7 +166,7 @@
                     <div class="review-avatar mb-3">
                         <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120" alt="مارلين روميرو" class="img-fluid rounded-circle w-100 h-100 object-cover">
                     </div>
-                    <h4 class="reviewer-name mb-3">مارلين روميرو</h4>
+                    <h4 class="reviewer-name mb-3">Marlin Romero</h4>
                     <p class="review-text text-muted">لدي مجموعة أواني الطهي هذه منذ أكثر من 25 عاماً، واحجت الآن فقط لإصلاح بعض القطع. حظيت بتجربة رائعة مع الخدمة، خاصة مع غلوريا التي بذلت كل ما في وسعها لمساعدتي. ممتازة بكل تأكيد</p>
                     <div class="review-footer mt-auto">
                         <span class="review-time">5 أشهر</span>
@@ -175,26 +185,30 @@
 
         <!-- Section 6: Contact Form -->
         <section class="contact-section py-5 px-4 px-lg-5 text-center">
-            <span class="contact-lead-text text-uppercase tracking-wider">ابقَ على تواصل</span>
-            <h2 class="section-heading mt-2 mb-5">اتصل بنا اليوم</h2>
+            <h2 class="section-heading mt-2 mb-5">احصل على عروضنا الخاصة</h2>
             
-            <form class="contact-form mx-auto text-start" autocomplete="off">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form mx-auto text-start" autocomplete="off">
+                <input type="hidden" name="access_key" value="">
+                <input type="hidden" name="form-name" value="نموذج اتصل بنا الرئيسي">
+                <input type="hidden" name="replyto" value="carico.jo@proton.me">
                 <div class="mb-4">
-                    <input type="text" class="form-control form-custom-input" placeholder="الاسم الكريم" autocomplete="new-password">
+                    <input type="text" class="form-control form-custom-input" placeholder="الاسم الكريم" autocomplete="new-password" required>
                 </div>
                 <div class="mb-4">
-                    <input type="email" class="form-control form-custom-input" placeholder="البريد الإلكتروني*" autocomplete="new-password">
+                    <input type="email" class="form-control form-custom-input" placeholder="البريد الإلكتروني" autocomplete="new-password" required>
                 </div>
                 <div class="mb-4">
-                    <textarea class="form-control form-custom-input" rows="6" placeholder="رسالتك" autocomplete="new-password"></textarea>
+                    <textarea class="form-control form-custom-input" rows="6" placeholder="رسالتك" autocomplete="new-password" required></textarea>
                 </div>
                 <div class="mb-4 form-check d-flex align-items-start justify-content-start">
-                    <input type="checkbox" class="form-check-input me-0 ms-2 mt-1 rounded-0" id="mailingList">
+                    <input type="checkbox" name="subscribe_mailing_list" value="نعم" class="form-check-input me-0 ms-2 mt-1 rounded-0" id="mailingList">
                     <label class="form-check-label text-muted sm-text" for="mailingList">انضم إلى قائمتنا البريدية للحصول على نصائح وتحديثات صحية مستمرة.</label>
                 </div>
                 <div class="text-center mt-5">
                     <button type="submit" class="btn btn-submit">إرسال</button>
                 </div>
+
+                <div id="contactResponse" class="mt-4 text-success fw-bold text-center d-none">شكراً لك! تم إرسال رسالتك بنجاح وسنتواصل معك قريباً.</div>
                 <p class="recaptcha-text text-center text-muted mt-4">
                     هذا الموقع محمي بواسطة reCAPTCHA وتطبق <a href="#">سياسة الخصوصية</a> و<a href="#">شروط الخدمة</a> الخاصة بـ Google.
                 </p>
@@ -228,7 +242,7 @@
                 </div>
                 
                 <form action="https://api.web3forms.com/submit" method="POST" id="chatForm" autocomplete="off">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="access_key" value="f6ffe1ac-de26-4faf-89e8-20588303c57d">
                     
                     <div class="mb-3">
                         <input type="text" name="name" class="form-control chat-input" placeholder="الاسم*" autocomplete="new-password" required>
@@ -274,6 +288,64 @@
             iconChat.classList.toggle('d-none');
             iconClose.classList.toggle('d-none');
             chatToggleBtn.classList.toggle('btn-active-dark');
+        });
+
+        const pollForm = document.getElementById('pollForm');
+        const pollResponse = document.getElementById('pollResponse');
+
+        pollForm.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const selection = document.querySelector('input[name="join_events"]:checked');
+            if(!selection){
+                alert("يرجى اختيار إجابة أولاً!");
+                return;
+            }
+
+            const formData = new FormData(pollForm);
+
+            fetch('https://api.web3forms.com/submit',{
+                method:'POST',
+                body: formData
+            })
+            .then(async(response) =>{
+                if(response.status == 200){
+                    pollResponse.classList.remove('d-none');
+                    pollForm.reset();
+                }
+                else{
+                    alert("عذراً، حدث خطأ ما. يرجى المحاولة لاحقاً.");
+                }
+            })
+            .catch(error => {
+                alert("عذراً، تعذر إرسال الإجابة حالياً.");
+            })
+        })
+
+        const contactForm = document.getElementById('contactForm');
+        const contactResponse = document.getElementById('contactResponse');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                if(response.status == 200){
+                    contactResponse.classList.remove('d-none');
+                    contactForm.reset();
+                }
+                else{
+                    alert("عذراً، حدث خطأ ما أثناء إرسال رسالتك. يرجى المحاولة لاحقاً.");
+                }
+            })
+            .catch(error => {
+                alert("عذراً، تعذر الاتصال بالسيرفر حالياً.");
+            });
         });
     </script>
 
