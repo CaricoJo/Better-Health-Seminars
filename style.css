@@ -37,10 +37,12 @@ body {
 }
 
 .main-content {
-    margin-right: 260px; /* Changed from margin-left to margin-right */
+    margin-right: 260px;
     margin-left: 0;
     width: calc(100% - 260px);
     position: relative;
+    z-index: 101 !important; 
+    pointer-events: auto !important;
 }
 
 /* --- Section 1: Hero Banner --- */
@@ -130,8 +132,7 @@ body {
     transition: all 0.3s ease;
     display: inline-block !important;
     position: relative !important;
-    z-index: 999 !important;
-    pointer-events: auto !important;
+    z-index: 99999 !important; 
     cursor: pointer !important;
     text-decoration: none !important;
 }
