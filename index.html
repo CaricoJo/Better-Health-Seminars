@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!-- lang set to "ar" and dir set to "rtl" handles the initial layout flip -->
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ندوات الصحة الأفضل </title>
+    <!-- Bootstrap 5 RTL CSS Variant -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Google Fonts: Cairo for modern geometric Arabic and Amiri for elegant serifs -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Right Sidebar (Now positioned on the right instead of left) -->
+    <div class="sidebar">
+        <div class="brand-logo">
+            ندوات<br>الصحة<br>الأفضل
+        </div>
+    </div>
+
+    <!-- Main Content Stream -->
+    <div class="main-content">
+        
+        <!-- Section 1: Hero Banner -->
+        <section class="hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070');">
+            <div class="hero-overlay">
+                <h1 class="hero-title">ابدأ طريقك نحو العافية</h1>
+            </div>
+        </section>
+
+        <!-- Section 2: Benefits Lists -->
+        <section class="benefits-section container-fluid py-5 px-4 px-lg-5">
+            <div class="row align-items-center g-5">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="list-wrapper">
+                        <h2 class="section-heading mb-4">هل ترغب في:</h2>
+                        <ul class="wellness-list mb-5">
+                            <li>إنقاص الوزن</li>
+                            <li>تعزيز جهازك المناعي</li>
+                            <li>الحصول على مزيد من الطاقة والحيوية</li>
+                            <li>الاستمتاع بنوم أفضل</li>
+                        </ul>
+
+                        <p class="risk-lead-text mb-4">وتقليل مخاطر الإصابة بـ:</p>
+                        <ul class="wellness-list">
+                            <li>السرطان</li>
+                            <li>أمراض القلب</li>
+                            <li>الربو</li>
+                            <li>السكري</li>
+                            <li>ارتفاع نسبة الكوليسترول</li>
+                            <li>ارتفاع ضغط الدم</li>
+                            <li>الاستيقاظ من النوم بضعف وتعب</li>
+                            <li>والمزيد...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-6">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=2070" alt="أشخاص يمارسون رياضة الجري" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Green Call to Action Box -->
+        <section class="cta-green-box" style="position: relative; z-index: 10;">
+            <div class="container-fluid px-4 px-lg-5 py-5">
+                <div class="row align-items-center justify-content-between g-4">
+                    <div class="col-xl-9 col-lg-8">
+                        <h2 class="cta-title mb-2">هل أنت مستعد لاتخاذ الخطوة التالية؟</h2>
+                        <p class="cta-subtitle mb-4">انضم إلينا في ندواتنا، واكتشف ما يمكننا تقديمه من أجلك.</p>
+                        <p class="cta-disclaimer mb-0">
+                            كتعبير عن شكرنا لك لحضور الفعالية الصحية الخاصة بشركتك، يسعدنا أن نقدم هذه الدعوة الحصرية لك ولأفراد عائلتك. احصل على <strong>قبول مجاني لحضور ندوة الصحة والعافية القادمة</strong>.
+                        </p>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 text-lg-start" style="position: relative; z-index: 20;">
+                        <a href="https://forms.gle/jDhRRXhh2ZQyp62B8" class="btn-get-started" target="_blank" rel="noopener noreferrer">ابدأ الآن</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Next Events -->
+        <section class="events-section py-5 px-4 px-lg-5">
+            <h2 class="section-heading text-center my-5">الفعاليات القادمة</h2>
+            <div class="row g-0 justify-content-center border-top border-bottom">
+                <!-- Column 1 -->
+                <div class="col-md-4 event-col text-center py-5 border-start">
+                    <h3 class="event-title mb-3">اسم الفعالية</h3>
+                    <p class="event-desc text-muted mb-5">أضف وصفاً قصيراً هنا.</p>
+                    <a href="#" class="btn-register">سجل الآن <i class="bi bi-chevron-left me-1"></i></a>
+                </div>
+                <!-- Column 2 -->
+                <div class="col-md-4 event-col text-center py-5 border-start">
+                    <h3 class="event-title mb-3">اسم الفعالية</h3>
+                    <p class="event-desc text-muted mb-5">أضف وصفاً قصيراً هنا.</p>
+                    <button class="btn btn-pay">ادفع الآن</button>
+                </div>
+                <!-- Column 3 -->
+                <div class="col-md-4 event-col text-center py-5">
+                    <h3 class="event-title mb-3">اسم الفعالية</h3>
+                    <p class="event-desc text-muted mb-5">أضف وصفاً قصيراً هنا.</p>
+                    <button class="btn btn-pay">ادفع الآن</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Reviews -->
+        <section class="reviews-section py-5 px-4 px-lg-5 text-center">
+            <h2 class="reviews-header mb-5">آراء وتجارب العملاء</h2>
+            
+            <div class="row justify-content-center align-items-stretch g-4 px-xl-5">
+                <!-- Review 1 -->
+                <div class="col-md-4 border-start-md review-card-wrapper px-4">
+                    <div class="review-avatar avatar-purple mb-3">ج</div>
+                    <h4 class="reviewer-name mb-3">جوهان لوتز</h4>
+                    <p class="review-text text-muted">كانت مارلين متعاونة للغاية في حل مشكلتي.. شكراً جزيلاً لكم</p>
+                    <div class="review-footer mt-auto">
+                        <span class="review-time">سنة واحدة</span>
+                        <div class="stars-wrapper mx-2 text-warning d-inline-block">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon" alt="Google" width="16">
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="col-md-4 border-start-md review-card-wrapper px-4">
+                    <div class="review-avatar avatar-teal mb-3">ج</div>
+                    <h4 class="reviewer-name fw-bold mb-3">خوسيه كوسمي</h4>
+                    <p class="review-text fw-semibold text-dark">ممتن جداً للخدمة الممتازة، عمل نظيف للغاية، منظم، ودود ومتعاون جداً</p>
+                    <div class="review-footer mt-auto">
+                        <span class="review-time">9 أشهر</span>
+                        <div class="stars-wrapper mx-2 text-warning d-inline-block">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon" alt="Google" width="16">
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="col-md-4 review-card-wrapper px-4">
+                    <div class="review-avatar mb-3">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120" alt="مارلين روميرو" class="img-fluid rounded-circle w-100 h-100 object-cover">
+                    </div>
+                    <h4 class="reviewer-name mb-3">مارلين روميرو</h4>
+                    <p class="review-text text-muted">لدي مجموعة أواني الطهي هذه منذ أكثر من 25 عاماً، واحجت الآن فقط لإصلاح بعض القطع. حظيت بتجربة رائعة مع الخدمة، خاصة مع غلوريا التي بذلت كل ما في وسعها لمساعدتي. ممتازة بكل تأكيد</p>
+                    <div class="review-footer mt-auto">
+                        <span class="review-time">5 أشهر</span>
+                        <div class="stars-wrapper mx-2 text-warning d-inline-block">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon" alt="Google" width="16">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact Form -->
+        <section class="contact-section py-5 px-4 px-lg-5 text-center">
+            <span class="contact-lead-text text-uppercase tracking-wider">ابقَ على تواصل</span>
+            <h2 class="section-heading mt-2 mb-5">اتصل بنا اليوم</h2>
+            
+            <form class="contact-form mx-auto text-start">
+                <div class="mb-4">
+                    <input type="text" class="form-control form-custom-input" placeholder="الاسم الكريم">
+                </div>
+                <div class="mb-4">
+                    <input type="email" class="form-control form-custom-input" placeholder="البريد الإلكتروني*">
+                </div>
+                <div class="mb-4">
+                    <textarea class="form-control form-custom-input" rows="6" placeholder="رسالتك"></textarea>
+                </div>
+                <div class="mb-4 form-check d-flex align-items-start justify-content-start">
+                    <input type="checkbox" class="form-check-input me-0 ms-2 mt-1 rounded-0" id="mailingList">
+                    <label class="form-check-label text-muted sm-text" for="mailingList">انضم إلى قائمتنا البريدية للحصول على نصائح وتحديثات صحية مستمرة.</label>
+                </div>
+                <div class="text-center mt-5">
+                    <button type="submit" class="btn btn-submit">إرسال</button>
+                </div>
+                <p class="recaptcha-text text-center text-muted mt-4">
+                    هذا الموقع محمي بواسطة reCAPTCHA وتطبق <a href="#">سياسة الخصوصية</a> و<a href="#">شروط الخدمة</a> الخاصة بـ Google.
+                </p>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer px-4 px-lg-5 py-4 border-top">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="footer-copy text-muted text-uppercase">
+                    حقوق الطبع والنشر © 2026 ندوات الصحة الأفضل - جميع الحقوق محفوظة.
+                </div>
+                <div class="footer-powered text-muted">
+                    مشغل بواسطة <span class="fw-bold text-dark"><i class="bi bi-arrow-up-left-circle-fill"></i> GoDaddy Airo</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Chat Widget Container -->
+    <div class="chat-widget-container">
+        <!-- Chat Popup Box -->
+        <div class="chat-popup-box" id="chatPopup">
+            <div class="chat-popup-header">
+                ندوات الصحة الأفضل
+            </div>
+            <div class="chat-popup-body">
+                <div class="chat-bubble-greeting">
+                    مرحباً! كيف يمكننا مساعدتك اليوم؟
+                </div>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" id="chatForm">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control chat-input" placeholder="الاسم*" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control chat-input" placeholder="البريد الإلكتروني*" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control chat-input" rows="4" placeholder="كيف يمكننا مساعدتك؟*" required></textarea>
+                    </div>
+                    
+                    <div class="text-center my-3">
+                        <button type="submit" class="btn btn-chat-send">إرسال</button>
+                    </div>
+                    
+                    <p class="chat-recaptcha-text text-center text-muted">
+                        هذا الموقع محمي بواسطة reCAPTCHA وتطبق <a href="#">سياسة الخصوصية</a> و<a href="#">شروط الخدمة</a>.
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Trigger Button -->
+        <div class="chat-floating-btn" id="chatToggleBtn">
+            <svg id="iconChat" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+            </svg>
+            <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg d-none" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Script to handle toggle functionality -->
+    <script>
+        const chatToggleBtn = document.getElementById('chatToggleBtn');
+        const chatPopup = document.getElementById('chatPopup');
+        const iconChat = document.getElementById('iconChat');
+        const iconClose = document.getElementById('iconClose');
+
+        chatToggleBtn.addEventListener('click', () => {
+            chatPopup.classList.toggle('show-chat');
+            iconChat.classList.toggle('d-none');
+            iconClose.classList.toggle('d-none');
+            chatToggleBtn.classList.toggle('btn-active-dark');
+        });
+    </script>
+
+</body>
+</html>
