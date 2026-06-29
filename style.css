@@ -371,19 +371,28 @@ body {
 
 @media (max-width: 991.98px) {
     .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 35px 20px;
-        border-left: none;
-        border-bottom: 1px solid #eaeaea;
-        z-index: 1 !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 30px 20px !important;
+        border-left: none !important;
+        border-bottom: 1px solid #eaeaea !important;
+        z-index: 1 !important; 
+        overflow: hidden !important;
     }
     .main-content {
-        margin-right: 0;
-        width: 100%;
+        margin-right: 0 !important;
+        width: 100% !important;
         position: relative !important;
-        z-index: 10 !important;
+        z-index: 5 !important; 
+        pointer-events: auto !important;
+    }
+
+    .btn-get-started,.btn-pay, .btn-register, .form-control, .form-custom-input{
+        position: relative !important;
+        z-index: 9999 !important;
+        pointer-events: auto !important;
+        touch-action: manipulation !important;
     }
     .hero-title {
         font-size: 2.5rem !important;
