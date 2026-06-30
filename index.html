@@ -290,70 +290,124 @@
         const iconChat = document.getElementById('iconChat');
         const iconClose = document.getElementById('iconClose');
 
-        chatToggleBtn.addEventListener('click', () => {
-            chatPopup.classList.toggle('show-chat');
-            iconChat.classList.toggle('d-none');
-            iconClose.classList.toggle('d-none');
-            chatToggleBtn.classList.toggle('btn-active-dark');
-        });
+        if(chatToggleBtn){
+            chatToggleBtn.addEventListener('click',() => {
+                chatPopup.classList.toggle('show-chat');
+                iconChat.classList.toggle('d-none');
+                iconClose.classList.toggle('d-none');
+                chatToggleBtn.classList.toggle('btn-active-dark');
+                });
+            } 
 
         const pollForm = document.getElementById('pollForm');
         const pollResponse = document.getElementById('pollResponse');
 
-        pollForm.addEventListener('submit', function(e){
-            e.preventDefault();
+        if(pollForm){
+            pollForm.addEventListener('submit', function(e){
+                e.preventDefault();
 
-            const selection = document.querySelector('input[name="join_events"]:checked');
-            if(!selection){
-                alert("يرجى اختيار إجابة أولاً!");
-                return;
-            }
-
-            const formData = new FormData(pollForm);
-
-            fetch('https://api.web3forms.com/submit',{
-                method:'POST',
-                body: formData
-            })
-            .then(async(response) =>{
-                if(response.status == 200){
-                    pollResponse.classList.remove('d-none');
-                    pollForm.reset();
+                const selection = document.querySelector('input[name="join_events"]:checked');
+                if(!selection){
+                    alert("يرجى اختيار إجابة أولاً!");
+                    return;
                 }
-                else{
-                    alert("عذراً، حدث خطأ ما. يرجى المحاولة لاحقاً.");
-                }
-            })
-            .catch(error => {
-                alert("عذراً، تعذر إرسال الإجابة حالياً.");
-            })
-        })
+
+                const formData = new FormData(pollForm);
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(async (response) => {
+                    if(response.status == 200){
+                        if(pollResponse)
+                        pollResponse.classList.remove('done');
+                        pollForm.reset();
+                    }
+                    else{
+                        alert("عذراً، حدث خطأ ما. يرجى المحاولة لاحقاً.");
+                    }
+                })
+                .catch(error => {
+                    alert("عذراً، تعذر إرسال الإجابة حالياً!");
+                });
+            });
+        }
 
         const contactForm = document.getElementById('contactForm');
         const contactResponse = document.getElementById('contactResponse');
 
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        if(contactForm){
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-            const formData = new FormData(contactForm);
+                const formData = new FormData(contactForm);
 
-            fetch('https://api.web3forms.com/submit', {
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(async (response) => {
+                    if(response.status == 200){
+                        if (contactResponse) contactResponse.classList.remove('d-none');
+                        contactForm.reset();
+                    }
+                    else{
+                        alert("عذراً، حدث خطأ ما أثناء إرسال رسالتك. يرجى المحاولة لاحقاً.");
+                    }
+                })
+                .catch(error => {
+                    alert("عذراً، تعذر الاتصال بالسيرفر حالياً!");
+                });
+            });
+        }
+
+        const chatForm = document.getElementById('chatForm');
+
+        if(chatForm){
+            chatForm.addEventListener('submit', function(e){
+                e.preventDefault();
+
+                const formData = new FormData(chatForm);
+                const submitBtn = chatForm.querySelector('.btn-chat-send');
+                const originalBtnText = submitBtn ? submitBtn.innerHTML : "إرسال";
+
+                if(submitBtn){
+                    submitBtn.innerHTML = "جاري الإرسال...";
+                    submitBtn.disabled = true;
+                }
+
+                fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 body: formData
-            })
-            .then(async (response) => {
-                if(response.status == 200){
-                    contactResponse.classList.remove('d-none');
-                    contactForm.reset();
-                }
-                else{
-                    alert("عذراً، حدث خطأ ما أثناء إرسال رسالتك. يرجى المحاولة لاحقاً.");
-                }
-            })
-            .catch(error => {
-                alert("عذراً، تعذر الاتصال بالسيرفر حالياً.");
+                })
+
+                .then(async (response) => {
+                    if(response.status == 200){
+                        alert("شكراً لك! تم إرسال رسالتك بنجاح.");
+                        chatForm.reset();
+                        if (chatPopup) chatPopup.classList.remove('show-chat');
+                        if (iconChat) iconChat.classList.remove('d-none');
+                        if (iconClose) iconClose.classList.add('d-none');
+                        if (chatToggleBtn) chatToggleBtn.classList.remove('btn-active-dark');
+                    }
+                    else{
+                        alert("عذراً، حدث خطأ ما أثناء إرسال رسالتك. يرجى المحاولة لاحقاً.");
+                    }
+                })
+
+                .catch(error => {
+                    alert("عذراً، تعذر الاتصال بالسيرفر حالياً!");
+                })
+                .then(() => {
+                    if(submitBtn){
+                        submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    }
+                });
             });
-        });
+        }
+        
     </script>
 
 </body>
