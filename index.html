@@ -250,21 +250,7 @@
     </div>
 
     <!-- Script to handle toggle functionality -->
-    <script>
-        const chatToggleBtn = document.getElementById('chatToggleBtn');
-        const chatPopup = document.getElementById('chatPopup');
-        const iconChat = document.getElementById('iconChat');
-        const iconClose = document.getElementById('iconClose');
-
-        if(chatToggleBtn){
-            chatToggleBtn.addEventListener('click',() => {
-                chatPopup.classList.toggle('show-chat');
-                iconChat.classList.toggle('d-none');
-                iconClose.classList.toggle('d-none');
-                chatToggleBtn.classList.toggle('btn-active-dark');
-                });
-            } 
-
+    <script> 
         const contactForm = document.getElementById('contactForm');
         const contactResponse = document.getElementById('contactResponse');
 
@@ -292,53 +278,6 @@
                 });
             });
         }
-
-        const chatForm = document.getElementById('chatForm');
-
-        if(chatForm){
-            chatForm.addEventListener('submit', function(e){
-                e.preventDefault();
-
-                const formData = new FormData(chatForm);
-                const submitBtn = chatForm.querySelector('.btn-chat-send');
-                const originalBtnText = submitBtn ? submitBtn.innerHTML : "إرسال";
-
-                if(submitBtn){
-                    submitBtn.innerHTML = "جاري الإرسال...";
-                    submitBtn.disabled = true;
-                }
-
-                fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
-                })
-
-                .then(async (response) => {
-                    if(response.status == 200){
-                        alert("شكراً لك! تم إرسال رسالتك بنجاح.");
-                        chatForm.reset();
-                        if (chatPopup) chatPopup.classList.remove('show-chat');
-                        if (iconChat) iconChat.classList.remove('d-none');
-                        if (iconClose) iconClose.classList.add('d-none');
-                        if (chatToggleBtn) chatToggleBtn.classList.remove('btn-active-dark');
-                    }
-                    else{
-                        alert("عذراً، حدث خطأ ما أثناء إرسال رسالتك. يرجى المحاولة لاحقاً.");
-                    }
-                })
-
-                .catch(error => {
-                    alert("عذراً، تعذر الاتصال بالسيرفر حالياً!");
-                })
-                .then(() => {
-                    if(submitBtn){
-                        submitBtn.innerHTML = originalBtnText;
-                        submitBtn.disabled = false;
-                    }
-                });
-            });
-        }
-        
     </script>
 
 </body>
