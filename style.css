@@ -585,11 +585,15 @@ body {
     .hero-heading {
         font-size: 1.8rem !important; 
         text-align: center !important; 
-        line-height: 1.4 !important;  
+        line-height: 1.4 !important; 
+        width: 90% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
     }
 
     .hero-heading .break-mobile {
-        display: block !important;    
-        margin-top: 5px;            
+        display: block !important; 
+        font-size: 1.6rem !important;
+        margin-top: 4px !important;            
     }
 }
