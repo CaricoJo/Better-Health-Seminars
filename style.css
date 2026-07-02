@@ -391,6 +391,9 @@ body {
     bottom: 75px !important;
     left: 0 !important;
     right: auto !important;
+    display: none !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     /*width: 360px;
     background-color: #ffffff;
     border-radius: 4px;
@@ -406,8 +409,9 @@ body {
 
 .chat-popup-box.show-chat {
     opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
+    display: block !important;
+   /* visibility: visible !important;
+    pointer-events: auto !important;*/
 }
 
 .chat-popup-header {
